@@ -1,10 +1,11 @@
 GIT
-  remote: git@github.com:adelevie/parse_resource.git
-  revision: 7851169f01ba65c4735d5b703b7d0bc1b097f0f0
+  remote: git://github.com/adelevie/parse_resource.git
+  revision: 051eb24d86a1ea60ee46417604a72bba0e1eb532
   specs:
-    parse_resource (1.7.1)
+    parse_resource (1.8.0)
       activemodel
       activesupport
+      json
       rest-client
 
 GEM
