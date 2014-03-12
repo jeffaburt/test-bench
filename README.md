@@ -1,7 +1,7 @@
 # About
 ===
 
-This is a simple Rails 3.1 app that uses [parse_resource](http://github.com/adelevie/parse_resource) for model persistence and includes a simple auth system that's based on this [Railscast](http://asciicasts.com/episodes/250-authentication-from-scratch).
+This is a simple Rails 3.1 app that uses [Parse Rails Boiler Plate](https://github.com/adelevie/parse-rails-boilerplate).
 
 # Installation
 ===
@@ -38,3 +38,14 @@ Once you have tested your changes and ready to submit, make sure you have merged
 ***Note: HEAD is another way of saying "current branch name"***
 
 Open a [Pull Request](https://github.com/jeffaburt/test-bench/compare) from the `master` branch to your new feature branch created above. Make sure the Pull Request is ready to merge.  If it is not, make sure you have the latest master merged into your feature branch.
+
+# Heroku
+Anytime master gets updated (i.e. if a Pull Request gets merged), Heroku might also need to be updated. 
+
+First, we must pre-compile the assets for production (this should probably be done in the PR since changes in master are what get pushed to Heroku):
+
+    RAILS_ENV=production bundle exec rake assets:precompile
+
+Then, we need to push the code. This will automatically push code from our `master` branch:
+
+    git push heroku master
