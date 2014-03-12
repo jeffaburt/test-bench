@@ -14,5 +14,4 @@
 /log/*.log
 /tmp
 
-# Uncomment the following line to prevent checking in the parse_resource credentials. Since this is just a small scale app right now, we can just include it publicly in the repo for simplicity's sake.
-# /config/parse_resource.yml
+/config/parse_resource.yml
